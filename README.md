@@ -11,6 +11,9 @@ Complete what you can in the time that you have been given, but don't stress too
 
 The app should allow the user to create, submit, and view their nominations for Cube of the Month.
 
+- iOS designs: [Figma](https://www.figma.com/file/BAOzJacpI4IemeawyFlw5j/Mobile-Mini-Task-flow?type=design&node-id=3088-44039&mode=design&t=wgGz06wMsoOdDdnb-4)
+- API documentation: [OpenAPI docs](https://cube-academy-api.cubeapis.com/docs)
+
 The app is made up of three screens:
 - **The home screen**, where the user can see can see a list of their submitted nominations.
   - This should be populated by data taken from the API. For new users, the data will be empty and so will display the empty state.
@@ -19,16 +22,10 @@ The app is made up of three screens:
 - **The nomination submitted screen**, thanking the user for their submission.
   - When the user returns to the home screen, their submitted nomination should be present.
 
-#### Links
-- iOS designs: [Figma](https://www.figma.com/file/BAOzJacpI4IemeawyFlw5j/Mobile-Mini-Task-flow?type=design&node-id=3088-44039&mode=design&t=wgGz06wMsoOdDdnb-4)
-- API documentation: [OpenAPI docs](https://cube-academy-api.cubeapis.com/docs)
-
-### API requests
-
-Please read the [OpenAPI docs](https://cube-academy-api.cubeapis.com/docs) documentation before beginning.
+### API Authentication
 
 You need to include an Authorization header to your API calls. The API uses a Bearer token for Authorization.
-** Since there isn't a login page in-app, you need to call the register/login endpoint from a software like postman and store the returned Auth Token (somewhere like the Info.plist). **
+Since there isn't a login page in-app, you need to call the register/login endpoint from a software like postman and store the returned Auth Token (somewhere like the Info.plist).
 
 ### Notes
 - Feel free to use any additional third-party frameworks, such as Alamofire.
