@@ -10,9 +10,15 @@ import SwiftUI
 
 @main
 struct NominationsApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                NavigationView {
+                    HomeView()
+                }
+                .toolbar(.hidden)
+            }
         }
     }
 }

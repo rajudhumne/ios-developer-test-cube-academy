@@ -25,6 +25,31 @@
 		1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */; };
 		1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */; };
 		1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */; };
+		7C149EC62BC4375900D20AE2 /* NominationFormPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C149EC52BC4375900D20AE2 /* NominationFormPopUpView.swift */; };
+		7C25FA322BC1ADBB00CCF7D6 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA312BC1ADBB00CCF7D6 /* Text.swift */; };
+		7C25FA352BC1BD0100CCF7D6 /* DropDownOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA342BC1BD0100CCF7D6 /* DropDownOptionView.swift */; };
+		7C25FA372BC1BE2400CCF7D6 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA362BC1BE2400CCF7D6 /* DropDownView.swift */; };
+		7C25FA3A2BC297C900CCF7D6 /* TextFieldLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA392BC297C900CCF7D6 /* TextFieldLView.swift */; };
+		7C25FA412BC2B5AA00CCF7D6 /* NominationFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA402BC2B5AA00CCF7D6 /* NominationFormViewModel.swift */; };
+		7C25FA432BC2B5EE00CCF7D6 /* RatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA422BC2B5EE00CCF7D6 /* RatingModel.swift */; };
+		7C25FA462BC2E01E00CCF7D6 /* RatingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA452BC2E01E00CCF7D6 /* RatingRowView.swift */; };
+		7C25FA492BC2F6E000CCF7D6 /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA482BC2F6E000CCF7D6 /* NominationSubmittedView.swift */; };
+		7C25FA4C2BC2FA1D00CCF7D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA4B2BC2FA1D00CCF7D6 /* HomeViewModel.swift */; };
+		7C25FA512BC2FE4900CCF7D6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA502BC2FE4900CCF7D6 /* NetworkManager.swift */; };
+		7C25FA532BC2FF0600CCF7D6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA522BC2FF0600CCF7D6 /* APIConstants.swift */; };
+		7C25FA552BC3186D00CCF7D6 /* HomeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA542BC3186D00CCF7D6 /* HomeDataService.swift */; };
+		7C25FA572BC31AF500CCF7D6 /* NomineesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA562BC31AF500CCF7D6 /* NomineesModel.swift */; };
+		7C25FA592BC32A5200CCF7D6 /* NominationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA582BC32A5200CCF7D6 /* NominationsModel.swift */; };
+		7C25FA5B2BC4108800CCF7D6 /* NominationRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA5A2BC4108800CCF7D6 /* NominationRequestModel.swift */; };
+		7C25FA5D2BC4116700CCF7D6 /* NominationFormService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA5C2BC4116700CCF7D6 /* NominationFormService.swift */; };
+		7C25FA5F2BC4127F00CCF7D6 /* NominationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA5E2BC4127F00CCF7D6 /* NominationResponseModel.swift */; };
+		7C25FA612BC4177000CCF7D6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA602BC4177000CCF7D6 /* UIApplication.swift */; };
+		7CC02C282BC169BA003CAD88 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C272BC169BA003CAD88 /* HomeView.swift */; };
+		7CC02C2A2BC16ACB003CAD88 /* NominationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C292BC16ACB003CAD88 /* NominationRowView.swift */; };
+		7CC02C302BC17FE6003CAD88 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C2F2BC17FE6003CAD88 /* PrimaryButtonView.swift */; };
+		7CC02C322BC17FFE003CAD88 /* SecondaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C312BC17FFE003CAD88 /* SecondaryButtonView.swift */; };
+		7CC02C352BC1A174003CAD88 /* NominationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C342BC1A174003CAD88 /* NominationForm.swift */; };
+		7CC02C382BC1AC2D003CAD88 /* NominationFieldHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C372BC1AC2D003CAD88 /* NominationFieldHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +71,31 @@
 		1BA8D9DD2AE2962B008FBB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontName+Names.swift"; sourceTree = "<group>"; };
 		1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
+		7C149EC52BC4375900D20AE2 /* NominationFormPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormPopUpView.swift; sourceTree = "<group>"; };
+		7C25FA312BC1ADBB00CCF7D6 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		7C25FA342BC1BD0100CCF7D6 /* DropDownOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownOptionView.swift; sourceTree = "<group>"; };
+		7C25FA362BC1BE2400CCF7D6 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		7C25FA392BC297C900CCF7D6 /* TextFieldLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLView.swift; sourceTree = "<group>"; };
+		7C25FA402BC2B5AA00CCF7D6 /* NominationFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormViewModel.swift; sourceTree = "<group>"; };
+		7C25FA422BC2B5EE00CCF7D6 /* RatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingModel.swift; sourceTree = "<group>"; };
+		7C25FA452BC2E01E00CCF7D6 /* RatingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRowView.swift; sourceTree = "<group>"; };
+		7C25FA482BC2F6E000CCF7D6 /* NominationSubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationSubmittedView.swift; sourceTree = "<group>"; };
+		7C25FA4B2BC2FA1D00CCF7D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7C25FA502BC2FE4900CCF7D6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7C25FA522BC2FF0600CCF7D6 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		7C25FA542BC3186D00CCF7D6 /* HomeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataService.swift; sourceTree = "<group>"; };
+		7C25FA562BC31AF500CCF7D6 /* NomineesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomineesModel.swift; sourceTree = "<group>"; };
+		7C25FA582BC32A5200CCF7D6 /* NominationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsModel.swift; sourceTree = "<group>"; };
+		7C25FA5A2BC4108800CCF7D6 /* NominationRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationRequestModel.swift; sourceTree = "<group>"; };
+		7C25FA5C2BC4116700CCF7D6 /* NominationFormService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormService.swift; sourceTree = "<group>"; };
+		7C25FA5E2BC4127F00CCF7D6 /* NominationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationResponseModel.swift; sourceTree = "<group>"; };
+		7C25FA602BC4177000CCF7D6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		7CC02C272BC169BA003CAD88 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7CC02C292BC16ACB003CAD88 /* NominationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationRowView.swift; sourceTree = "<group>"; };
+		7CC02C2F2BC17FE6003CAD88 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
+		7CC02C312BC17FFE003CAD88 /* SecondaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonView.swift; sourceTree = "<group>"; };
+		7CC02C342BC1A174003CAD88 /* NominationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationForm.swift; sourceTree = "<group>"; };
+		7CC02C372BC1AC2D003CAD88 /* NominationFieldHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFieldHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +114,9 @@
 		1B8FA0842AE2B69E009E185D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7C25FA382BC2979800CCF7D6 /* TextFieldLarge */,
+				7C25FA332BC1BCEB00CCF7D6 /* DropDown */,
+				7CC02C2E2BC17FD3003CAD88 /* Buttons */,
 				1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */,
 				1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */,
 			);
@@ -92,7 +145,11 @@
 				1BA8D9DD2AE2962B008FBB3F /* Info.plist */,
 				1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */,
 				1BA8D9BA2AE290D7008FBB3F /* ContentView.swift */,
-				1B8FA0842AE2B69E009E185D /* Components */,
+				7CC02C242BC1695C003CAD88 /* Core */,
+				7C25FA3B2BC2B4E500CCF7D6 /* Model */,
+				7C25FA302BC1AD9800CCF7D6 /* Extension */,
+				7C25FA442BC2C56D00CCF7D6 /* Utilities */,
+				7C25FA4D2BC2FB0700CCF7D6 /* Services */,
 				1BA8D9DE2AE29652008FBB3F /* Resources */,
 				1BA8D9BE2AE290DA008FBB3F /* Preview Content */,
 			);
@@ -147,6 +204,144 @@
 				1BA8D9CE2AE29617008FBB3F /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C25FA302BC1AD9800CCF7D6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA312BC1ADBB00CCF7D6 /* Text.swift */,
+				7C25FA602BC4177000CCF7D6 /* UIApplication.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7C25FA332BC1BCEB00CCF7D6 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA342BC1BD0100CCF7D6 /* DropDownOptionView.swift */,
+				7C25FA362BC1BE2400CCF7D6 /* DropDownView.swift */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		7C25FA382BC2979800CCF7D6 /* TextFieldLarge */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA392BC297C900CCF7D6 /* TextFieldLView.swift */,
+			);
+			path = TextFieldLarge;
+			sourceTree = "<group>";
+		};
+		7C25FA3B2BC2B4E500CCF7D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA422BC2B5EE00CCF7D6 /* RatingModel.swift */,
+				7C25FA562BC31AF500CCF7D6 /* NomineesModel.swift */,
+				7C25FA582BC32A5200CCF7D6 /* NominationsModel.swift */,
+				7C25FA5A2BC4108800CCF7D6 /* NominationRequestModel.swift */,
+				7C25FA5E2BC4127F00CCF7D6 /* NominationResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C25FA3D2BC2B57300CCF7D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA402BC2B5AA00CCF7D6 /* NominationFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C25FA442BC2C56D00CCF7D6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA502BC2FE4900CCF7D6 /* NetworkManager.swift */,
+				7C25FA522BC2FF0600CCF7D6 /* APIConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7C25FA472BC2F6BF00CCF7D6 /* NominationSubmitted */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA482BC2F6E000CCF7D6 /* NominationSubmittedView.swift */,
+			);
+			path = NominationSubmitted;
+			sourceTree = "<group>";
+		};
+		7C25FA4A2BC2FA1000CCF7D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA4B2BC2FA1D00CCF7D6 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C25FA4D2BC2FB0700CCF7D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA542BC3186D00CCF7D6 /* HomeDataService.swift */,
+				7C25FA5C2BC4116700CCF7D6 /* NominationFormService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7CC02C242BC1695C003CAD88 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA472BC2F6BF00CCF7D6 /* NominationSubmitted */,
+				7CC02C332BC1A0B2003CAD88 /* NominationForm */,
+				7CC02C252BC1697B003CAD88 /* Home */,
+				1B8FA0842AE2B69E009E185D /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7CC02C252BC1697B003CAD88 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA4A2BC2FA1000CCF7D6 /* ViewModel */,
+				7CC02C262BC16981003CAD88 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7CC02C262BC16981003CAD88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CC02C272BC169BA003CAD88 /* HomeView.swift */,
+				7CC02C292BC16ACB003CAD88 /* NominationRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CC02C2E2BC17FD3003CAD88 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				7CC02C2F2BC17FE6003CAD88 /* PrimaryButtonView.swift */,
+				7CC02C312BC17FFE003CAD88 /* SecondaryButtonView.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7CC02C332BC1A0B2003CAD88 /* NominationForm */ = {
+			isa = PBXGroup;
+			children = (
+				7C25FA3D2BC2B57300CCF7D6 /* ViewModel */,
+				7CC02C362BC1ABB8003CAD88 /* View */,
+			);
+			path = NominationForm;
+			sourceTree = "<group>";
+		};
+		7CC02C362BC1ABB8003CAD88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CC02C342BC1A174003CAD88 /* NominationForm.swift */,
+				7CC02C372BC1AC2D003CAD88 /* NominationFieldHeaderView.swift */,
+				7C25FA452BC2E01E00CCF7D6 /* RatingRowView.swift */,
+				7C149EC52BC4375900D20AE2 /* NominationFormPopUpView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,11 +430,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */,
+				7C25FA4C2BC2FA1D00CCF7D6 /* HomeViewModel.swift in Sources */,
+				7CC02C2A2BC16ACB003CAD88 /* NominationRowView.swift in Sources */,
+				7C25FA492BC2F6E000CCF7D6 /* NominationSubmittedView.swift in Sources */,
+				7C25FA462BC2E01E00CCF7D6 /* RatingRowView.swift in Sources */,
+				7C25FA412BC2B5AA00CCF7D6 /* NominationFormViewModel.swift in Sources */,
 				1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */,
+				7CC02C352BC1A174003CAD88 /* NominationForm.swift in Sources */,
 				1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */,
+				7C25FA612BC4177000CCF7D6 /* UIApplication.swift in Sources */,
+				7C25FA552BC3186D00CCF7D6 /* HomeDataService.swift in Sources */,
+				7C25FA372BC1BE2400CCF7D6 /* DropDownView.swift in Sources */,
+				7C25FA572BC31AF500CCF7D6 /* NomineesModel.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
+				7C25FA512BC2FE4900CCF7D6 /* NetworkManager.swift in Sources */,
+				7C25FA5F2BC4127F00CCF7D6 /* NominationResponseModel.swift in Sources */,
 				1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */,
+				7C25FA592BC32A5200CCF7D6 /* NominationsModel.swift in Sources */,
+				7C25FA3A2BC297C900CCF7D6 /* TextFieldLView.swift in Sources */,
+				7CC02C382BC1AC2D003CAD88 /* NominationFieldHeaderView.swift in Sources */,
+				7CC02C282BC169BA003CAD88 /* HomeView.swift in Sources */,
+				7CC02C302BC17FE6003CAD88 /* PrimaryButtonView.swift in Sources */,
+				7C25FA322BC1ADBB00CCF7D6 /* Text.swift in Sources */,
+				7C149EC62BC4375900D20AE2 /* NominationFormPopUpView.swift in Sources */,
+				7C25FA352BC1BD0100CCF7D6 /* DropDownOptionView.swift in Sources */,
 				1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */,
+				7C25FA532BC2FF0600CCF7D6 /* APIConstants.swift in Sources */,
+				7CC02C322BC17FFE003CAD88 /* SecondaryButtonView.swift in Sources */,
+				7C25FA5B2BC4108800CCF7D6 /* NominationRequestModel.swift in Sources */,
+				7C25FA432BC2B5EE00CCF7D6 /* RatingModel.swift in Sources */,
+				7C25FA5D2BC4116700CCF7D6 /* NominationFormService.swift in Sources */,
 				1BA8D9CD2AE294B3008FBB3F /* FigmaShadow+Shadows.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,13 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 0) {
-            HeaderBarView()
-            ScrollView {
-                NominationsHeaderView()
-            }
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
         }
-        .background(.cubeLightGrey)
+        .padding()
     }
 }
 
