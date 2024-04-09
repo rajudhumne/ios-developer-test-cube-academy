@@ -28,7 +28,6 @@ struct PrimaryButtonView: View {
             })
             .disabled(!isActive)
         }
-        
     }
 }
 

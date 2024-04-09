@@ -28,12 +28,6 @@ struct HomeView: View {
                 }else {
                     allNominationsList
                 }
-
-//                if viewModel.nominationsData?.isEmpty {
-//                    emptyState
-//                } else {
-//                    allNominationsList
-//                }
                 buttonFooterView
             }
         }
@@ -61,7 +55,6 @@ extension HomeView {
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
         .listStyle(.plain)
-        
     }
     
     private var buttonFooterView: some View {

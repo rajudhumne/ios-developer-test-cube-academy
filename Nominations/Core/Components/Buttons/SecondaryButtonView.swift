@@ -21,10 +21,6 @@ struct SecondaryButtonView: View {
                 .style(.button)
                 .foregroundStyle(.black)
                 .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
-                
-            
-                
-                
         })
     }
 }

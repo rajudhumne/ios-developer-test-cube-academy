@@ -21,7 +21,7 @@ struct DropDownOptionView: View {
                 .style(.body)
                 .padding()
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, alignment: .leading)
-                
+            
                 .foregroundStyle(.black)
                 .background(.cubeLightGrey)
         }

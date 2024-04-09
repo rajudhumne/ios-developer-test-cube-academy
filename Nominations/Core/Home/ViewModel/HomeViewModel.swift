@@ -36,18 +36,16 @@ class HomeViewModel: ObservableObject {
         dispatchGroup.enter()
         homeDataService.getAllNominations { [weak self] result in
             DispatchQueue.main.async {
-            switch result {
-            case .success(let success):
+                switch result {
+                case .success(let success):
                     self?.allNominations = success.data
-            case .failure(_):
-                self?.showAlert = true
-            }
-            
-         
+                case .failure(_):
+                    self?.showAlert = true
+                }
                 self?.dispatchGroup.leave()
             }
         }
-
+        
         dispatchGroup.enter()
         homeDataService.getAllNominees { [weak self] result in
             
@@ -62,13 +60,10 @@ class HomeViewModel: ObservableObject {
                 
                 self?.dispatchGroup.leave()
             }
-            
         }
-    
+        
         dispatchGroup.notify(queue: .main) {
-          
-              self.mapNominationsAndNomineeData(nominations: self.allNominations, nominees: self.allNominees)
-            
+            self.mapNominationsAndNomineeData(nominations: self.allNominations, nominees: self.allNominees)
         }
     }
     
@@ -82,8 +77,8 @@ class HomeViewModel: ObservableObject {
                 }
             }
         }
-            nominationsData = nominationsDataArr
-            isActiveButton = true
+        nominationsData = nominationsDataArr
+        isActiveButton = true
     }
     
 }

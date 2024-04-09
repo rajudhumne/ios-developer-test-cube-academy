@@ -28,10 +28,8 @@ struct NominationSubmittedView: View {
                         Text(Constants.Text.NominationSubmitted.NOMINATION_SUBMITTED_DESCRIPTION)
                             .style(.body)
                             .multilineTextAlignment(.center)
-                            
                     }
                     .padding(20)
-                    
                     Spacer()
                     VStack {
                         PrimaryButtonView(title: Constants.Text.Button.CREATE_NEW_NOMINATION, isActive: .constant(true)) {

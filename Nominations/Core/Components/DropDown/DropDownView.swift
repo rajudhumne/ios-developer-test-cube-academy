@@ -66,7 +66,3 @@ struct DropDownView: View {
         
     }
 }
-
-//#Preview {
-//    DropDownView(nomineeId: .constant("Option Selected"), allNominees: [], selectedNomineeId: <#(String) -> ()#>)
-//}
