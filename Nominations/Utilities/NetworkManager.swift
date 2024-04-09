@@ -36,13 +36,7 @@ class NetworkManager {
            urlRequest.httpMethod = httpMethod.rawValue
         
            if let requestBody = requestBody {
-               do {
-                   urlRequest.httpBody = requestBody
-                   
-               } catch {
-                   completion(.failure(.invalidData))
-                   return
-               }
+               urlRequest.httpBody = requestBody
            }
            
            urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
@@ -67,9 +61,13 @@ class NetworkManager {
                
                do {
                    let decodedData = try JSONDecoder().decode(T.self, from: data)
-                   completion(.success(decodedData))
+                   DispatchQueue.main.async {
+                       completion(.success(decodedData))
+                   }
                } catch {
-                   completion(.failure(.requestFailed(error)))
+                   DispatchQueue.main.async {
+                       completion(.failure(.requestFailed(error)))
+                   }
                }
            }.resume()
        }

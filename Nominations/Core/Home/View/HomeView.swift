@@ -8,52 +8,53 @@
 
 import SwiftUI
 
+/// Home Screen
+///
 struct HomeView: View {
     
-    
-    
+    /// View Model for Home Screen
     @StateObject var viewModel = HomeViewModel()
-    @State var isActive : Bool = false
     
     @State private var showNominationsForm: Bool = false
     
     var body: some View {
         ZStack {
-            Color.white
-
             VStack(spacing: 0) {
                 HeaderBarView()
                 NominationsHeaderView()
                 
-//                Spacer()
-                if viewModel.nominationsData.isEmpty {
+                if let nominationsData = viewModel.nominationsData, nominationsData.isEmpty {
                     emptyState
-                } else {
+                }else {
                     allNominationsList
                 }
-                
-                
+
+//                if viewModel.nominationsData?.isEmpty {
+//                    emptyState
+//                } else {
+//                    allNominationsList
+//                }
                 buttonFooterView
-              
             }
-            
         }
+        .alert("Something went wrong. Please try again!", isPresented: $viewModel.showAlert, actions: {
+            Button("Ok") {}
+        })
         .background {
             NavigationLink(destination: NominationFormLoadingView(nomineesModel: viewModel.allNomieesResponseData), isActive: $showNominationsForm) {
                 EmptyView()
             }
         }
-        .onAppear(perform: {
+        .onAppear {
             viewModel.fetchData()
-        })
-        
+        }
     }
 }
 
 extension HomeView {
     private var allNominationsList: some View {
         List {
-            ForEach(viewModel.nominationsData) { nominee in
+            ForEach(viewModel.nominationsData ?? []) { nominee in
                 NominationRowView(nomation: nominee)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 0))
             }
@@ -65,7 +66,7 @@ extension HomeView {
     
     private var buttonFooterView: some View {
         VStack {
-            PrimaryButtonView(title: "CREATE NEW NOMINATION", isActive: $viewModel.isActiveButton) {
+            PrimaryButtonView(title: Constants.Text.Button.CREATE_NEW_NOMINATION, isActive: $viewModel.isActiveButton) {
                 showNominationsForm.toggle()
             }
             .frame(width: UIScreen.main.bounds.width * 0.85)
@@ -82,14 +83,13 @@ extension HomeView {
                 .resizable()
                 .frame(width: 80, height: 60)
                 .foregroundStyle(.cubeMidGrey)
-            Text("ONCE YOU SUMBIT A NOMINATION, YOU WILL BE ABLE TO SEE IT HERE")
+            Text(Constants.Text.Home.EMPTY_NOMINATIONS_LIST_TEXT)
                 .padding()
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.cubeDarkGrey)
                 .style(.boldHeadlineMedium)
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-
     }
 }
 

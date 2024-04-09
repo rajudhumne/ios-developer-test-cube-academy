@@ -8,7 +8,11 @@
 
 import SwiftUI
 
+/// Nomination Form Loading View
+
 struct NominationFormLoadingView: View {
+    
+    /// Takes Nominees Model to initialize view
     
     var nomineesModel: NomineesModel?
     
@@ -25,6 +29,8 @@ struct NominationFormLoadingView: View {
 }
 
 struct NominationForm: View {
+    
+    // Properties
     @State private var selectedOption: String?
     @State private var showOptions: Bool = false
     @State private var showPopupModel: Bool = false
@@ -38,10 +44,10 @@ struct NominationForm: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            VStack(spacing: 0) {
+                HeaderBarView(title: Constants.Text.NominationForm.NOMINATION_FORM_HEADER_TITLE)
                 ScrollView {
                     VStack(spacing: 0) {
-                        HeaderBarView(title: "Create a nomination")
                         Image("nomination.header.bg")
                             .resizable()
                             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 200)
@@ -51,8 +57,6 @@ struct NominationForm: View {
                     }
                 }
                 buttonsFooterView
-                
-                
             }
             .background {
                 NavigationLink(destination: NominationSubmittedView(), isActive: $vm.showNominationSubmittedView) {
@@ -62,6 +66,15 @@ struct NominationForm: View {
             .onTapGesture {
                 UIApplication.shared.endEditing()
             }
+            .onAppear {
+                DispatchQueue.main.async {
+                    vm.resetForm()
+                }
+            }
+            .alert("Something went wrong. Please try again!", isPresented: $vm.showAlert) {
+                Button("Ok") { }
+            }
+            
             NominationFormPopUpView(isShowing: $showPopupModel) {
                 showPopupModel = false
                 dismiss()
@@ -70,29 +83,26 @@ struct NominationForm: View {
     }
     
     func selectedNomineeId(_ id: String) {
-        print(id)
         vm.nomineeId = id
+        vm.validateForm()
     }
 }
-
 
 extension NominationForm {
     
     private var cubeNameSelectionView: some View {
         VStack(spacing: 20) {
-            NominationFieldHeaderView(title: "I'D LIKE TO NOMINATE...", description: "Please select a cube who you feel has done something honourable this month or just all round has a great work ethic.")
+            NominationFieldHeaderView(title: Constants.Text.NominationForm.LIKE_TO_NOMIATE_TITLE, description: Constants.Text.NominationForm.NOMINATION_NAME_SELECTION_DESCRIPTION)
             
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
                     Text.redAsterisk(fontSize: 24)
-                    Text("Cube's name")
+                    Text(Constants.Text.NominationForm.CUBE_NAME_SELECTION)
                         .style(.boldHeadlineSmall)
-                    
                 }
                 
                 DropDownView(allNominees: vm.nomineesModel.data, selectedNomineeId: selectedNomineeId(_:))
                     .frame(width: UIScreen.main.bounds.width * 0.9)
-                
                 
                 Rectangle()
                     .fill(.cubeDarkGrey)
@@ -104,33 +114,34 @@ extension NominationForm {
     
     private var nominationReasonSectionView: some View {
         VStack(spacing: 20) {
-            NominationFieldHeaderView(title: "I’D LIKE TO NOMINATE THIS CUBE BECAUSE...", description: "Please let us know why you think this cube deserves the ‘cube of the month’ title 🏆⭐")
-            
+            NominationFieldHeaderView(title: Constants.Text.NominationForm.NOMINATION_REASON_TITLE, description: Constants.Text.NominationForm.NOMINATION_REASON_DESCRIPTION)
             
             VStack(spacing: 0) {
                 HStack {
                     Text.redAsterisk(fontSize: 24)
-                    Text("Reasoning")
+                    Text(Constants.Text.NominationForm.REASONING)
                         .style(.boldHeadlineSmall)
                 }
                 .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                 
                 TextFieldLView(textFieldText: $vm.reasonText)
                     .padding([.leading, .trailing], 18)
+                
+            }
+            .onReceive(vm.$reasonText) { newValue in
+                vm.validateForm()
             }
             
             Rectangle()
                 .fill(.cubeDarkGrey)
                 .frame(width: UIScreen.main.bounds.width * 0.9, height: 1)
                 .padding(.top, 10)
-            
         }
     }
     
     private var nominaitonRatingView: some View {
         VStack(spacing: 20) {
-            NominationFieldHeaderView(title: "IS HOW WE CURRENTLY RUN CUBE OF THE MONTH FAIR?", description: "As you know, out the nominees chosen, we spin a wheel to pick the cube of the month. What’s your opinion on this method?")
-            
+            NominationFieldHeaderView(title: Constants.Text.NominationForm.NOMINATION_RATING_TITLE, description: Constants.Text.NominationForm.NOMINATION_REASON_DESCRIPTION)
             
             VStack(spacing: 10) {
                 ForEach(vm.ratings.indices, id: \.self) { index in
@@ -145,16 +156,13 @@ extension NominationForm {
     
     private var buttonsFooterView: some View {
         HStack {
-            SecondaryButtonView(title: "Back") {
+            SecondaryButtonView(title: Constants.Text.Button.BACK) {
                 showPopupModel = true
             }
-            PrimaryButtonView(title: "Submit", isActive: $vm.enableCreateNominationButton) {
-                print("Tapped")
-                vm.validateForm()
-                
+            PrimaryButtonView(title: Constants.Text.Button.SUBMIT_NOMINATION, isActive: $vm.enableCreateNominationButton) {
+                vm.submitForm()
             }
-                .frame(width: UIScreen.main.bounds.width * 0.6)
-                .disabled(vm.enableCreateNominationButton)
+            .frame(width: UIScreen.main.bounds.width * 0.6)
         }
         .padding()
         .frame(width: UIScreen.main.bounds.width, height: 80)
@@ -163,8 +171,6 @@ extension NominationForm {
         )
     }
 }
-
-
 
 #Preview {
     NominationForm(nomineesModel: NomineesModel(data: []))

@@ -26,7 +26,7 @@ struct PrimaryButtonView: View {
                     .background(isActive ? .black : .cubeMidGrey)
                     
             })
-//            .disabled(!isActive)
+            .disabled(!isActive)
         }
         
     }

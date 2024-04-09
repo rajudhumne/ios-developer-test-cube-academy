@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+/// Nomination Form Fields View takes title and description
+/// 
 struct NominationFieldHeaderView: View {
     var title: String
     var description: String

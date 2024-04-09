@@ -8,10 +8,12 @@
 
 import SwiftUI
 
+/// Rating Row View
+/// Takes Rating model to show data
+///  action call back 
 struct RatingRowView: View {
     
     let rating: RatingModel
-    
     let action: () -> Void
     
     var body: some View {
@@ -25,9 +27,7 @@ struct RatingRowView: View {
                     .style(.boldHeadlineSmall)
             }
             .padding(.leading)
-            
             Spacer()
-            
             Button(action: {
                 action()
             }, label: {

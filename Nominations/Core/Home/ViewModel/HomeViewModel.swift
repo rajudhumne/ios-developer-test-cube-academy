@@ -8,112 +8,82 @@
 
 import Foundation
 
-
+/// Data Model for Nominations List
 struct NominationsDataModel: Identifiable {
     let id = UUID().uuidString
     let name: String
     let reason: String
 }
 
-
+@MainActor
 class HomeViewModel: ObservableObject {
     
     private let homeDataService = HomeDataService()
-    
-    var allNominations: [NominationsModel.Nominations] = []
-    var allNominees: [NomineesModel.Nominees] = []
+    private var allNominations: [NominationsModel.Nominations] = []
+    private var allNominees: [NomineesModel.Nominees] = []
     var allNomieesResponseData: NomineesModel?
     
-    @Published var nominationsData: [NominationsDataModel] = []
+    @Published var nominationsData: [NominationsDataModel]?
     @Published var isActiveButton: Bool = false
     
-    let dispatchGroup = DispatchGroup()
+    @Published var showAlert: Bool = false
     
-    func getAllNominations() {
-        dispatchGroup.enter()
-        homeDataService.getAllNominations {[weak self] result in
-            self?.dispatchGroup.leave()
-            switch result {
-            case .success(let success):
-                DispatchQueue.main.async {
-                    self?.allNominations = success.data
-                }
-            case .failure(let failure):
-                debugPrint(failure)
-            }
-        }
-    }
+    /// Used Dispatch Group for for hanlding two api calls
+    private let dispatchGroup = DispatchGroup()
     
-    func getAllNominees() {
-        dispatchGroup.enter()
-        homeDataService.getAllNominees { [weak self] result in
-            self?.dispatchGroup.leave()
-            switch result {
-            case .success(let response):
-                print(response)
-                self?.allNomieesResponseData = response
-                self?.allNominees = response.data
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
-    
+    /// API Calls
     func fetchData() {
         dispatchGroup.enter()
-        homeDataService.getAllNominations {[weak self] result in
-            self?.dispatchGroup.leave()
+        homeDataService.getAllNominations { [weak self] result in
+            DispatchQueue.main.async {
             switch result {
             case .success(let success):
-                DispatchQueue.main.async {
                     self?.allNominations = success.data
-                }
-            case .failure(let failure):
-                debugPrint(failure)
+            case .failure(_):
+                self?.showAlert = true
+            }
+            
+         
+                self?.dispatchGroup.leave()
             }
         }
-        
+
         dispatchGroup.enter()
         homeDataService.getAllNominees { [weak self] result in
-            self?.dispatchGroup.leave()
-            switch result {
-            case .success(let response):
-                self?.allNominees = response.data
-                self?.allNomieesResponseData = response
-            case .failure(let failure):
-                print(failure)
+            
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    self?.allNominees = response.data
+                    self?.allNomieesResponseData = response
+                case .failure(_):
+                    self?.showAlert = true
+                }
+                
+                self?.dispatchGroup.leave()
             }
+            
         }
-        
+    
         dispatchGroup.notify(queue: .main) {
-            self.mapNominationsAndNomineeData(nominations: self.allNominations, nominees: self.allNominees)
+          
+              self.mapNominationsAndNomineeData(nominations: self.allNominations, nominees: self.allNominees)
+            
         }
-        
     }
     
+    /// Mapping data from two api response to show nomination list
     func mapNominationsAndNomineeData(nominations: [NominationsModel.Nominations], nominees: [NomineesModel.Nominees]) {
-        
         var nominationsDataArr: [NominationsDataModel] = []
-        
         for nominee in nominees {
-            
             for nomination in nominations {
-                
                 if nominee.nomineeID == nomination.nomineeID {
-                    print("--------------------------------------------")
-                    print(nominee.nomineeID)
-                    print(nomination.nomineeID)
-                    print("--------------------------------------------")
-                    
                     nominationsDataArr.append(NominationsDataModel(name: nominee.firstName, reason: nomination.reason))
                 }
             }
-            
         }
-        
-        nominationsData = nominationsDataArr
-        
-        isActiveButton.toggle()
+            nominationsData = nominationsDataArr
+            isActiveButton = true
     }
     
 }

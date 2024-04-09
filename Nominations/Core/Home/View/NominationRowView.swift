@@ -8,10 +8,9 @@
 
 import SwiftUI
 
+/// Home Screen Nomination List Row View 
 struct NominationRowView: View {
-    
     let nomation: NominationsDataModel
-    
     
     var body: some View {
         VStack(spacing: 4) {
@@ -33,7 +32,3 @@ struct NominationRowView: View {
         .background(.white)
     }
 }
-
-//#Preview {
-//    NominationRowView(nominee: Nominees(nomineeID: "", firstName: "", lastName: ""))
-//}

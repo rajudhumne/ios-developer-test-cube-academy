@@ -8,20 +8,24 @@
 
 import SwiftUI
 
+/// Nomination Submitted Screen
 struct NominationSubmittedView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         NavigationView {
             ZStack {
                 VStack(spacing: 0) {
-                    HeaderBarView(title: "Nomination Submitted")
+                    HeaderBarView(title: Constants.Text.Button.NOMINATION_SUBMITTED)
                     Image("nomination_submitted_bg")
                         .resizable()
                         .frame(maxWidth: .infinity, maxHeight: 200)
                         
                     VStack {
-                        Text("NOMIATION SUBMITTED")
+                        Text(Constants.Text.Button.NOMINATION_SUBMITTED.uppercased())
                             .style(.boldHeadlineLarge)
-                        Text("Thank you for taking the time to fill out this form! Why not nominate another cube?")
+                        Text(Constants.Text.NominationSubmitted.NOMINATION_SUBMITTED_DESCRIPTION)
                             .style(.body)
                             .multilineTextAlignment(.center)
                             
@@ -30,8 +34,12 @@ struct NominationSubmittedView: View {
                     
                     Spacer()
                     VStack {
-                        PrimaryButtonView(title: "CREATE NEW NOMINATION", isActive: .constant(true))
-                        SecondaryButtonView(title: "BACK TO HOME")
+                        PrimaryButtonView(title: Constants.Text.Button.CREATE_NEW_NOMINATION, isActive: .constant(true)) {
+                            dismiss()
+                        }
+                        SecondaryButtonView(title: Constants.Text.Button.BACK_TO_HOME) {
+                            NavigationUtil.popToRootView(animated: true)
+                        }
                     }
                     .padding()
                     .frame(width: UIScreen.main.bounds.width, height: 140)

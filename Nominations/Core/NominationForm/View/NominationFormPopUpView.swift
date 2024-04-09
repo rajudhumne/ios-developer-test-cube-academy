@@ -8,10 +8,11 @@
 
 import SwiftUI
 
+/// Custom Pop View to show Alert in Nomination Form Screen 
+///
 struct NominationFormPopUpView: View {
     
     @Binding var isShowing: Bool
-    
     let action: () -> ()
     
     var body: some View {
@@ -25,9 +26,9 @@ struct NominationFormPopUpView: View {
                 
                 VStack(spacing: 0) {
                     VStack(alignment: .leading, spacing: 20) {
-                        Text("ARE YOU SURE?")
+                        Text(Constants.Text.PopUp.ARE_YOU_SURE)
                             .style(.boldHeadlineMedium)
-                        Text("If you leave this page, you will loose any progress made.")
+                        Text(Constants.Text.PopUp.LOOSE_PROGRESS_WARNING_TEXT)
                             .style(.body)
                     }
                     .padding(.horizontal)
@@ -37,11 +38,11 @@ struct NominationFormPopUpView: View {
                     Spacer()
                     
                     VStack {
-                        SecondaryButtonView(title: "YES, LEAVE PAGE") {
+                        SecondaryButtonView(title: Constants.Text.Button.YES_LEAVE_PAGE) {
                             action()
                             
                         }
-                        SecondaryButtonView(title: "CANCEL") {
+                        SecondaryButtonView(title: Constants.Text.Button.CANCEL) {
                             isShowing = false
                         }
                     }
@@ -55,8 +56,6 @@ struct NominationFormPopUpView: View {
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 .background(.white)
                 .transition(.move(edge: .bottom))
-                
-                
             }
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)

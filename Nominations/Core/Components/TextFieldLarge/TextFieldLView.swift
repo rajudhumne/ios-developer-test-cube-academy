@@ -11,11 +11,9 @@ import SwiftUI
 struct TextFieldLView: View {
     
     @Binding var textFieldText: String
-    
     let charactorLimit = 280
     
     var body: some View {
-        
         ZStack(alignment: .leading) {
             if textFieldText.isEmpty {
                 VStack {
@@ -23,10 +21,7 @@ struct TextFieldLView: View {
                         .padding(.top, 14)
                         .padding(.leading, 10)
                         .style(.body)
-                        
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        
                     Spacer()
                 }
             }

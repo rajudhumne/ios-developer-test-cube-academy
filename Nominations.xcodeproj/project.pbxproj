@@ -44,6 +44,8 @@
 		7C25FA5D2BC4116700CCF7D6 /* NominationFormService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA5C2BC4116700CCF7D6 /* NominationFormService.swift */; };
 		7C25FA5F2BC4127F00CCF7D6 /* NominationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA5E2BC4127F00CCF7D6 /* NominationResponseModel.swift */; };
 		7C25FA612BC4177000CCF7D6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C25FA602BC4177000CCF7D6 /* UIApplication.swift */; };
+		7C9F3EAD2BC47C43000AF8A1 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F3EAC2BC47C43000AF8A1 /* NavigationUtil.swift */; };
+		7C9F3EAF2BC57C68000AF8A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9F3EAE2BC57C68000AF8A1 /* Constants.swift */; };
 		7CC02C282BC169BA003CAD88 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C272BC169BA003CAD88 /* HomeView.swift */; };
 		7CC02C2A2BC16ACB003CAD88 /* NominationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C292BC16ACB003CAD88 /* NominationRowView.swift */; };
 		7CC02C302BC17FE6003CAD88 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC02C2F2BC17FE6003CAD88 /* PrimaryButtonView.swift */; };
@@ -90,6 +92,8 @@
 		7C25FA5C2BC4116700CCF7D6 /* NominationFormService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormService.swift; sourceTree = "<group>"; };
 		7C25FA5E2BC4127F00CCF7D6 /* NominationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationResponseModel.swift; sourceTree = "<group>"; };
 		7C25FA602BC4177000CCF7D6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		7C9F3EAC2BC47C43000AF8A1 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		7C9F3EAE2BC57C68000AF8A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7CC02C272BC169BA003CAD88 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7CC02C292BC16ACB003CAD88 /* NominationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationRowView.swift; sourceTree = "<group>"; };
 		7CC02C2F2BC17FE6003CAD88 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 			children = (
 				7C25FA502BC2FE4900CCF7D6 /* NetworkManager.swift */,
 				7C25FA522BC2FF0600CCF7D6 /* APIConstants.swift */,
+				7C9F3EAC2BC47C43000AF8A1 /* NavigationUtil.swift */,
+				7C9F3EAE2BC57C68000AF8A1 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */,
+				7C9F3EAF2BC57C68000AF8A1 /* Constants.swift in Sources */,
 				7C25FA4C2BC2FA1D00CCF7D6 /* HomeViewModel.swift in Sources */,
 				7CC02C2A2BC16ACB003CAD88 /* NominationRowView.swift in Sources */,
 				7C25FA492BC2F6E000CCF7D6 /* NominationSubmittedView.swift in Sources */,
@@ -455,6 +462,7 @@
 				7C149EC62BC4375900D20AE2 /* NominationFormPopUpView.swift in Sources */,
 				7C25FA352BC1BD0100CCF7D6 /* DropDownOptionView.swift in Sources */,
 				1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */,
+				7C9F3EAD2BC47C43000AF8A1 /* NavigationUtil.swift in Sources */,
 				7C25FA532BC2FF0600CCF7D6 /* APIConstants.swift in Sources */,
 				7CC02C322BC17FFE003CAD88 /* SecondaryButtonView.swift in Sources */,
 				7C25FA5B2BC4108800CCF7D6 /* NominationRequestModel.swift in Sources */,
